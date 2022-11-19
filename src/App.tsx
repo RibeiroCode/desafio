@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import logo from './logo.svg';
-import './App.css';
-import { withRouter, Link, Switch, Route,} from "react-router-dom";
+import ReactDOM from 'react-dom';
+import { RouteComponentProps,withRouter, Link, Switch, Route,} from "react-router-dom";
 import UserForm from './imports/ui/pages/UserForm';
 
-function App () {
-    return (
+function App(): ReactElement {
+  return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -32,10 +32,8 @@ function App () {
 
       
 
-   
-
   );
-};
+  }
 
 
-export default withRouter(App);
+export default App;

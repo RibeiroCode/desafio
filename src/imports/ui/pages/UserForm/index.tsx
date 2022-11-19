@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css"
+import Input from "../../components/Input";
 
 import { ReactElement } from "react";
 import api from "../../../../services/api";
@@ -30,7 +31,12 @@ function UserForm(): ReactElement {
       <main>
         
   
-
+      <Input
+              name="name"
+              label="Nome Completo"
+              value={name}
+             // onChange={(e) => { setName(e.target.value) }}
+            />
         
           
         
