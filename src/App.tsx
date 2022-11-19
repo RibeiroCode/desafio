@@ -1,9 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { withRouter, Link, Switch, Route,} from "react-router-dom";
+import UserForm from './imports/ui/pages/UserForm';
 
-function App() {
-  return (
+function App () {
+    return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -18,13 +20,22 @@ function App() {
         >
           Learn React
         </a>
+      
+        <Link to={"/userForm"}> Criar Usuário</Link>
+        
       </header>
+     <Switch>
+     <Route path ="/userform" exact component ={UserForm}/>
+     </Switch>
+      
     </div>
+
       
 
    
 
   );
-}
+};
 
-export default App;
+
+export default withRouter(App);
